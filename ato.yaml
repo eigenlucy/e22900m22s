@@ -15,7 +15,7 @@ package:
   version: "0.1.0"
   authors:
     - name: lucy moglia
-      email: eigenlucy
+      email: eigenlucy@proton.me
   summary: SX1262 22dBm LoRa Transciever
   license: GNU General Public License v3
   homepage: https://github.com/eigenlucy/e22900m22s
