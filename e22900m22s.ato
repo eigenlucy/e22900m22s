@@ -1,0 +1,47 @@
+\
+# e22900m22s.ato
+import ElectricPower
+from "spi.ato" import SPI
+# Based on the SX1262 (assumption, similar to M30S)
+
+component E22900M22S:
+    """Chengdu_Ebyte_Elec_Tech_E22_900M22S component"""
+    lcsc_id = "C411293"
+    manufacturer = "Chengdu Ebyte Elec Tech"
+    mpn = "E22-900M22S"
+    datasheet_url = "https://datasheet.lcsc.com/lcsc/1912111437_Chengdu-Ebyte-Elec-Tech-E22-900M22S_C411293.pdf"
+    designator_prefix = "U"
+
+    # pins (Assuming same pinout as E22-900M30S)
+    signal GND ~ pin 1
+    GND ~ pin 2
+    GND ~ pin 3
+    GND ~ pin 4
+    GND ~ pin 5
+    signal RXEN ~ pin 6 # Enable LoRa reception (check datasheet, might differ)
+    signal TXEN ~ pin 7 # Enable LoRa transmission (check datasheet, might differ)
+    signal DIO2 ~ pin 8 # Configurable GPIO
+    signal VCC ~ pin 9
+    VCC ~ pin 10
+    GND ~ pin 11
+    GND ~ pin 12
+    signal DIO ~ pin 13 # Configurable GPIO (Often DIO1 for LoRa events)
+    signal BUSY ~ pin 14 # RF Status Indicator
+    signal NRST ~ pin 15 # Reset trigger pin, active low
+    signal MISO ~ pin 16
+    signal MOSI ~ pin 17
+    signal SCK ~ pin 18
+    signal NSS ~ pin 19 # SPI CS
+    GND ~ pin 20
+    signal ANT ~ pin 21
+    GND ~ pin 22
+
+    power = new ElectricPower
+    power.gnd ~ GND; power.vcc ~ VCC
+
+    spi = new SPI
+    spi.mosi ~ MOSI
+    spi.miso ~ MISO
+    spi.sck ~ SCK
+    spi.cs ~ NSS
+    # Note: spi.gnd is implicitly connected via power.gnd

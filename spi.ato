@@ -1,0 +1,8 @@
+\
+# spi.ato
+interface SPI:
+    signal mosi
+    signal miso
+    signal sck
+    signal cs
+    signal gnd
