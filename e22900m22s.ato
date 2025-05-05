@@ -22,7 +22,7 @@ component E22900M22S:
     signal TXEN ~ pin 7 # Enable LoRa transmission (check datasheet, might differ)
     signal DIO2 ~ pin 8 # Configurable GPIO
     signal VCC ~ pin 9
-    VCC ~ pin 10
+    GND ~ pin 10
     GND ~ pin 11
     GND ~ pin 12
     signal DIO ~ pin 13 # Configurable GPIO (Often DIO1 for LoRa events)
