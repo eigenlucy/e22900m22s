@@ -1,7 +1,6 @@
 \
 # e22900m22s.ato
-import ElectricPower
-from "spi.ato" import SPI
+import ElectricPower, ElectricLogic, SPI
 # Based on the SX1262 (assumption, similar to M30S)
 
 component E22900M22S:
@@ -42,6 +41,7 @@ component E22900M22S:
     spi = new SPI
     spi.mosi ~ MOSI
     spi.miso ~ MISO
-    spi.sck ~ SCK
-    spi.cs ~ NSS
+    spi.sclk ~ SCK
+    spi_cs = new ElectricLogic
+    spi_cs.line ~ NSS
     # Note: spi.gnd is implicitly connected via power.gnd

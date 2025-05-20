@@ -88,17 +88,17 @@
     )
     (net 0 "")
     (net 1 "TXEN")
-    (net 2 "miso")
+    (net 2 "MISO")
     (net 3 "BUSY")
-    (net 4 "hv")
-    (net 5 "sck")
-    (net 6 "mosi")
+    (net 4 "VCC")
+    (net 5 "SCK")
+    (net 6 "MOSI")
     (net 7 "NRST")
     (net 8 "DIO2")
     (net 9 "RXEN")
     (net 10 "ANT")
     (net 11 "gnd")
-    (net 12 "cs")
+    (net 12 "NSS")
     (net 13 "DIO")
     (footprint "atopile:R0402-56259e"
         (layer "F.Cu")
@@ -360,7 +360,7 @@
             (at -0.43 0 0)
             (size 0.57 0.54)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 4 "hv")
+            (net 4 "VCC")
             (uuid "be234447-e295-4e87-b9b1-488e0397664f")
         )
         (pad "2" smd rect
@@ -388,7 +388,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 50V X7R"
+        (property "Value" "10µF ±10% 25V X5R"
             (at 0 0 0)
             (layer "F.Fab")
             (hide no)
@@ -436,7 +436,7 @@
                 )
             )
         )
-        (property "LCSC" "C49678"
+        (property "LCSC" "C15850"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -448,7 +448,7 @@
                 )
             )
         )
-        (property "Partnumber" "CC0805KRX7R9BB104"
+        (property "Partnumber" "CL21A106KAYNNNE"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -460,7 +460,7 @@
                 )
             )
         )
-        (property "Manufacturer" "YAGEO"
+        (property "Manufacturer" "Samsung Electro-Mechanics"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -472,7 +472,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "50V 100nF X7R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "25V 10uF X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -484,7 +484,7 @@
                 )
             )
         )
-        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 9e-08, \"max\": 1.1e-07}}]}}, \"unit\": \"farad\"}}"
+        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 8.999999985e-06, \"max\": 1.1000000015e-05}}]}}, \"unit\": \"farad\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -496,7 +496,7 @@
                 )
             )
         )
-        (property "PARAM_temperature_coefficient" "{\"type\": \"EnumSet\", \"data\": {\"elements\": [{\"name\": \"X7R\"}], \"enum\": {\"name\": \"TemperatureCoefficient\", \"values\": {\"Y5V\": 1, \"Z5U\": 2, \"X7S\": 3, \"X5R\": 4, \"X6R\": 5, \"X7R\": 6, \"X8R\": 7, \"C0G\": 8}}}}"
+        (property "PARAM_temperature_coefficient" "{\"type\": \"EnumSet\", \"data\": {\"elements\": [{\"name\": \"X5R\"}], \"enum\": {\"name\": \"TemperatureCoefficient\", \"values\": {\"Y5V\": 1, \"Z5U\": 2, \"X7S\": 3, \"X5R\": 4, \"X6R\": 5, \"X7R\": 6, \"X8R\": 7, \"C0G\": 8}}}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -508,7 +508,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 25.0, \"max\": 25.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -676,7 +676,7 @@
             (at -1 0 180)
             (size 1.41 1.35)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 4 "hv")
+            (net 4 "VCC")
             (uuid "d91bfefa-1a4c-4774-8e39-106c457a57b6")
         )
         (pad "2" smd rect
@@ -980,7 +980,7 @@
             (at -0.55 0 180)
             (size 0.79 0.54)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 4 "hv")
+            (net 4 "VCC")
             (uuid "86d5ed3d-e60e-4d2f-8b44-1db841121935")
         )
         (pad "2" smd rect
@@ -1362,7 +1362,7 @@
             (at 7 -5.96 90)
             (size 1.8 0.9)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 4 "hv")
+            (net 4 "VCC")
             (uuid "605755a7-1a82-4f5a-b530-b41c558264f7")
         )
         (pad "10" smd rect
@@ -1411,28 +1411,28 @@
             (at -7 -3.42 90)
             (size 1.8 0.9)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 2 "miso")
+            (net 2 "MISO")
             (uuid "43a8c31f-3993-4067-959b-39699460a5ab")
         )
         (pad "17" smd rect
             (at -7 -2.15 90)
             (size 1.8 0.9)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 6 "mosi")
+            (net 6 "MOSI")
             (uuid "af7e2b13-24b2-4fee-8ff4-a5475803c190")
         )
         (pad "18" smd rect
             (at -7 -0.88 90)
             (size 1.8 0.9)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 5 "sck")
+            (net 5 "SCK")
             (uuid "1ef5b1ba-cb82-47c3-84cd-e8ec818b1350")
         )
         (pad "19" smd rect
             (at -7 0.39 90)
             (size 1.8 0.9)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 12 "cs")
+            (net 12 "NSS")
             (uuid "69d90d83-6f24-40eb-82aa-3c96d4bf38de")
         )
         (pad "20" smd rect
@@ -1718,7 +1718,7 @@
             (at -0.43 0 0)
             (size 0.57 0.54)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 4 "hv")
+            (net 4 "VCC")
             (uuid "0ae18eca-92e8-414c-96ab-f9b793b74fb4")
         )
         (pad "2" smd rect

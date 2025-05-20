@@ -1,5 +1,4 @@
-import ElectricPower, Capacitor, Resistor
-from "spi.ato" import SPI
+import ElectricPower, ElectricLogic, Capacitor, Resistor, SPI
 from "e22900m22s.ato" import E22900M22S
 
 module Lora:
@@ -10,6 +9,8 @@ module Lora:
 
     spi = new SPI
     spi ~ lora.spi
+    spi_cs = new ElectricLogic
+    spi_cs.line ~ lora.spi_cs.line
 
     # Decoupling capacitors
     C1 = new Capacitor; C1.value = 10uF +/- 20%; C1.package = "C0805"
@@ -31,5 +32,5 @@ module Lora:
     # mcu_txen ~ lora.TXEN
     # mcu_mosi ~ spi.mosi
     # mcu_miso ~ spi.miso
-    # mcu_sck ~ spi.sck
-    # mcu_cs ~ spi.cs
+    # mcu_sck ~ spi.sclk
+    # mcu_cs ~ spi_cs.line
